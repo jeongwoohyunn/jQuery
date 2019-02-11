@@ -2,12 +2,28 @@
  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta http-equiv="Content-Script-Type" content="text/javascript" />
-		<title>sample1</title>
+<meta charset="UTF-8">
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			var $li= $("li");
+			$li.css("color","#f00");
+			
+			//jquery object?
+			console.log($li.length);
+			console.log($li[0] + ":"+typeof $li[0]);//HTMLelement
+			console.log($li.get(0) + ":" + typeof $li[0]);
+			//error
+			//li[0].css("color","#f00");
+			$li[0].style.color = "#00f";
+			$li.get(3).style.color = "#00f";
+			//wrap query object
+			$($li[1]).css("color","#00f");
+			$($li.get(2)).css("color","#00f");
+			//래핑하고쓴다. jquery는 배열의 확장 하나씩 쓸때는 element의 확장
+			},2000);
+		});
 		</script>
 	</head>
 	<body>

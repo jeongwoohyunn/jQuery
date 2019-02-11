@@ -9,7 +9,26 @@
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
 		$(function(){
+			setTimeout(function(){
 			$("#first").css("color","red");
+			//jquey에서 select하는 문법 #을 붙여줘야된다.
+			$("#fourth").css("color","#00f");
+			
+			/* var $third = $("#third");
+			$third.css("color","#0f0");
+			$third.css("font-weight","bold");
+			 */
+			 $("#third").css({
+				 color:"#0f0",
+				 "font-weight" : "bold"
+			 });
+			//모든 jQuery API 함수들은 jQuery Object를 다시 반환한다.
+			
+			console.log($("third").css("color","f00"));
+			//따라서 함수 체인을 사용 할 수 있다.
+			$("#second").css("color","#f00").css("fontWeight","bold").
+			html("<strong>hello!</strong>")
+			},1000);
 		});
 		</script>
 	</head>
