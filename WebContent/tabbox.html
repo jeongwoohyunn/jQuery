@@ -8,13 +8,14 @@
 <script>
 $(function(){
 	$("li").click(function(){
+		//셀렉터에 지정된 태그를 클릭시 이벤트
 		$("li.selected").removeClass("selected");
 		
 		$(this).addClass("selected");
 		
 		$("#"+$("p:visible").attr("id")).hide();
 		
-		$("#"+$(this).attr("data-vid")).show;
+		$("#"+$(this).data("vid")).show();
 	});
 });
 </script>
@@ -29,7 +30,7 @@ $(function(){
 			<li data-vid="view-5">메뉴 5</li>
 		</ul>
 		<div id="tabview">
-			<p id="view-1">탭뷰1 입니다.</p>
+			<p id="view-1" style="display: block">탭뷰1 입니다.</p>
 			<p id="view-2" style="display: none">탭뷰2 입니다.</p>
 			<p id="view-3" style="display: none">탭뷰3입니다.</p>
 			<p id="view-4" style="display: none">탭뷰4 입니다.</p>
