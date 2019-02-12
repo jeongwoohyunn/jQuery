@@ -6,9 +6,9 @@
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
 	$(function(){
-		setTimeout(function(){
-			var $li= $("li");
-			$li.css("color","#f00");
+		setTimeout(function(){//타임아웃이므로 밑에 시간이 지나고 실행됨
+			var $li= $("li");//html의 li태그들 객체?
+			$li.css("color","#f00");//객체들의 색상 설정
 			
 			//jquery object?
 			console.log($li.length);
@@ -16,9 +16,10 @@
 			console.log($li.get(0) + ":" + typeof $li[0]);
 			//error
 			//li[0].css("color","#f00");
-			$li[0].style.color = "#00f";
+			$li[0].style.color = "#00f";//객체선언 후 컬러의 값을 지정(확장)
 			$li.get(3).style.color = "#00f";
-			//wrap query object
+			//wrap query object 
+			//객체에 값을 설정할때는 위형식으로 쓰거나 .css으로 쓰려면 wrapping을 해야된다.
 			$($li[1]).css("color","#00f");
 			$($li.get(2)).css("color","#00f");
 			//래핑하고쓴다. jquery는 배열의 확장 하나씩 쓸때는 element의 확장

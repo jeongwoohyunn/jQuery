@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<title>sample2</title>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("button").click(function() {
+			$("div").load("sample2_load.html p");
+			// sample2_load.html의 p의 내용을 가져옴
+			// 통신이 일어난다.
+			
+			
+		});
+	});
+</script>
+</head>
+<body>
+	<button>변경</button>
+	<div>
+		<p>변경전</p>
+	</div>
+</body>
+</html>

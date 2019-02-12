@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<title>sample1</title>
+<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("button").click(function() {
+			$("p").load("./sample1.txt");//url도 가능 txt읽어와서 뿌려줌
+			//간단하게 load 비동기방식으로 - 통신에서 가져와서 html의 내용을 바꿈
+		});
+	});
+</script>
+</head>
+<body>
+	<button>변경</button>
+	<p>변경전</p>
+</body>
+</html>
